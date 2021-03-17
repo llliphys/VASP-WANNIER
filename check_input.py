@@ -125,7 +125,6 @@ def main():
         print("python check_input.py incar [ediff] [isif]")
         print("python check_input.py poscar [lattice] [position]")
         print("python check_input.py potcar [titel] [encut]")
-
         exit(1)
 
     if "incar" in args: check_incar(args[1::])
@@ -134,4 +133,5 @@ def main():
     if "kpoints" in args: check_kpoints(args[1::])
 
 if __name__ == "__main__":
+    
    main()
