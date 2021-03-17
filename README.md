@@ -1,4 +1,4 @@
-### VaspScripts
+### Vasp Scripts
 ---
 Here are some python scripts used to check the VASP input/output files: INCAR, POSCAR, POTCAR, KPOINTS, OSZICAR, OUTCAR, EIGENVAL, DOSCAR, and so on. To check out how to use them, just simply command `python script.py` to have a first glance.
 
@@ -8,14 +8,14 @@ Here are some python scripts used to check the VASP input/output files: INCAR, P
 
 - `to be continued`: more scripts are yet to come ...
 
-### Installation
+### How to Install
 ---
 The simpliest way is to put these scripts into a directory and then export the path of this directoy as `PYTHONPATH`.
 ```
 export PYTHONPATH=/the/path/of/the/directory:${PYTHONPATH}
 ```
 
-### ExampleUsage
+### Example Usage
 ---
 ```
 python check_input.py incar [ediff] [isif]
