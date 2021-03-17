@@ -6,7 +6,7 @@ import sys
 import numpy as np
 
 
-def check_relax(args):
+def check_outcar(args):
 
     print("===============Checking OUTCAR==============")
 
@@ -19,49 +19,38 @@ def check_relax(args):
     for i in range(len(outcar)):
         outcar[i] = outcar[i].strip().strip("\n")
 
-    converge = False
+    lookup_rlx = "reached required accuracy"
+    lookup_scf = "aborting loop because EDIFF is reached"
+
+    rlx_conv = None
     for line in outcar[::-1]:
         if "reached required accuracy" in line:
-            converge = True
+            rlx_conv = True
             break
 
-    if converge:
-        print("Relaxation Converged !")
-    else:
-        print("Relaxation NOT Converged !")
-        exit(1)
-
-    if "energy" in args: get_energy(outcar)
-    if "magmom" in args: get_magmom(outcar)
-
-
-def check_scf(args):
-
-    print("===============Checking OUTCAR==============")
-
-    if not os.path.isfile("OUTCAR"):
-        print("Error: No OUTCAR Found !")
-        exit(1)
-
-    with open("OUTCAR", "r") as f:
-        outcar = f.readlines()
-    for i in range(len(outcar)):
-        outcar[i] = outcar[i].strip().strip("\n")
-
-    converge = False
+    scf_conv = None
     for line in outcar[::-1]:
-        if "absorting loop because EDIFF is reached" in line:
-            converge = True
+        if "aborting loop because EDIFF is reached" in line:
+            scf_conv = True
             break
 
-    if converge:
-        print("Electronic SCF Converged !")
-    else:
-        print("Electronic SCF NOT Converged !")
-        exit(1)
+    if rlx_conv is not None:
+        if rlx_conv:
+            print("Relaxation Converged !")
+        else:
+            print("Relaxation NOT Converged !")
+            exit(1)
+
+    if scf_conv is not None:
+        if scf_conv:
+            print("Electronic SCF Converged !")
+        else:
+            print("Electronic SCF NOT Converged !")
+            exit(1)
 
     if "energy" in args: get_energy(outcar)
     if "magmom" in args: get_magmom(outcar)
+
 
 def get_energy(outcar):
 
@@ -123,14 +112,6 @@ def get_magmom(outcar):
     if mspnz is not None: print("Magnetization (z) = ", mspnz_list)
 
 
-# def check_gap(args):
-#
-#     print("===============Checking EIGENVAL==============")
-#
-#     if not os.path.isfile("EIGENVAL"):
-#         raise SystemExit("Error: No EIGENVAL Found !")
-
-
 def main():
 
     args = sys.argv[1:] # a list of args
@@ -138,17 +119,15 @@ def main():
     if args == []:
         print("Check VASP Outputs with Arguments below")
         print("Mandatory Arguments:")
-        print("relax     --->    for OUTCAR checking to see if relax is converged")
-        print("scf       --->    for OUTCAR checking to see if scf is converged")
+        print("outcar    --->    for OUTCAR checking to see if a relax or scf is converged")
         print("Optional Arguments:")
         print("energy    --->    for OUTCAR checking with energy information printed out")
         print("magmom    --->    for OUTCAR checking with magmom information printed out")
         print("How to Use:")
-        print("python check_outcar relax [energy] [magmom]")
+        print("python check_output.py outcar [energy] [magmom]")
         exit(1)
 
-    if "relax" in args: check_relax(args[1::])
-    if "scf" in args: check_scf(args[1::])
+    if "outcar" in args: check_outcar(args[1::])
 
 if __name__ == "__main__":
    main()
