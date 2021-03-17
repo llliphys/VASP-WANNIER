@@ -6,6 +6,8 @@ Here are some python scripts used to check the VASP input/output files: INCAR, P
 
 - `check_output.py`: check OUTCAR to see if a relaxation or scf calculation is converged.
 
+- `pycheck.py`: simply merge the above two scripts into a single script (more compact).
+
 - `to be continued`: more scripts are yet to come ...
 
 ### Install
@@ -22,4 +24,5 @@ python check_input.py incar [ediff] [isif]
 python check_input.py poscar [lattice] [position]
 python check_input.py potcar [titel] [encut]
 python check_output.py outcar [energy] [magmom]
+python pycheck.py incar/poscar/potcar/outcar
 ```
