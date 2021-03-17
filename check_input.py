@@ -81,9 +81,12 @@ def check_potcar(args):
 
     for line in potcar:
         if "titel" in args and "TITEL" in line: print(line)
-        if "enmax" in args and "ENMAX" in line: print(line)
         if not args and "TITEL" in line: print(line)
+
+    for line in potcar:
+        if "encut" in args and "ENMAX" in line: print(line)
         if not args and "ENMAX" in line: print(line)
+
 
 def check_kpoints(args):
 
@@ -116,14 +119,19 @@ def main():
         print("nsw/...   --->    for INCAR checking with given tag information printed out")
         print("lattice   --->    for POSCAR checking with lattice information printed out")
         print("position  --->    for POSCAR checking with atomic coordinates printed out")
-        print("encutmax  --->    for POTCAR checking with ENMAX information printed out")
+        print("titel     --->    for POTCAR checking with exchange-correlation type printed out")
+        print("encut     --->    for POTCAR checking with max/min ENCUT info printed out")
+        print("How to Use:")
+        print("python check_input.py incar [ediff] [isif]")
+        print("python check_input.py poscar [lattice] [position]")
+        print("python check_input.py potcar [titel] [encut]")
+
         exit(1)
 
     if "incar" in args: check_incar(args[1::])
     if "poscar" in args: check_poscar(args[1::])
     if "potcar" in args: check_potcar(args[1::])
     if "kpoints" in args: check_kpoints(args[1::])
-    if "contcar" in args: check_kpoints(args[1::])
 
 if __name__ == "__main__":
    main()
