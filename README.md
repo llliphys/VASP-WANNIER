@@ -19,12 +19,12 @@ The simpliest way is to put these scripts into a directory and then export the p
 export PYTHONPATH=/the/path/of/the/directory:${PYTHONPATH}
 ```
 
-### Require
+###
 ---
 Prior to using these python scripts, the following prerequisites need to be installed:
 - numpy: https://numpy.org/
 - ase: https://wiki.fysik.dtu.dk/ase/
-and the following can also be installed but are optional for pycell.py and pycheck.py.
+<br>and the following can also be installed but are optional for pycell.py and pycheck.py.
 - scipy: https://www.scipy.org/
 - matplotlib: https://matplotlib.org/
 
