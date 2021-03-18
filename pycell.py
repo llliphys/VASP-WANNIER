@@ -4,8 +4,8 @@ import os
 import sys
 import argparse
 import numpy as np
-import ase.io.vasp
-from ase import io
+# import ase.io.vasp
+# from ase import io
 import ase
 
 def modify_cell(infile=None, direct=None, vacuum=None, numcell=None):
@@ -35,9 +35,6 @@ def modify_cell(infile=None, direct=None, vacuum=None, numcell=None):
     #     numcell = (1, 1, 1)
     # else:
     #     numcell = numcell
-    # if infile.endswith(".cif"):
-    #     atoms = io.read(infile)
-    #     atoms.write("POSCAR", format="vasp", vasp5=True, direct=direct)
 
     atoms = ase.io.read(infile)
     atoms.center(axis=2, vacuum=vacuum/2.0)
@@ -51,24 +48,6 @@ def modify_cell(infile=None, direct=None, vacuum=None, numcell=None):
         ase.io.vasp.write_vasp("POSCAR-SC", atoms*numcell, label="Supercell", vasp5=True, direct=direct, sort=True)
 
 def main():
-
-    # args = sys.argv[1::]
-
-    # if len(args) > 0:
-    #     infile = str(sys.argv[1])
-    #
-    # if len(args) > 1:
-    #     direct = float(sys.argv[2])
-    # if len(args) > 1:
-    #     vacuum = float(sys.argv[2])
-    # if len(args) > 1:
-
-    # infile = sys.argv[1]
-    #
-    # numcell = (int(s) for s in sys.argv[2:4])
-    # direct = str(sys.argv[5]).lower() == "true"
-    # vacuum = float(sys.argv[6])
-
 
     args = sys.argv[1:]
 
