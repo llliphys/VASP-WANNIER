@@ -8,7 +8,7 @@ Here are some python scripts used to check the VASP input/output files: INCAR, P
 
 - `pycheck.py`: simply merge the above two scripts into a single script (more compact).
 
-- `pycell.py`: manipulate CIF or POSCAR file, e.g. making supercell, varying vacuum lenght.
+- `pycell.py`: manipulate CIF or POSCAR file, e.g., making supercell, varying vacuum size, etc.
 
 - `to be continued`: more scripts are yet to come ...
 
