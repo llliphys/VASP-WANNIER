@@ -24,7 +24,8 @@ export PYTHONPATH=/the/path/of/the/directory:${PYTHONPATH}
 Prior to using these python scripts, the following prerequisites need to be installed:
 - numpy: https://numpy.org/
 - ase: https://wiki.fysik.dtu.dk/ase/
-<br>and the following can also be installed but are optional for pycell.py and pycheck.py.
+
+and the following can also be installed but are optional for pycell.py and pycheck.py.
 - scipy: https://www.scipy.org/
 - matplotlib: https://matplotlib.org/
 
