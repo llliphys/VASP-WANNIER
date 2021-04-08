@@ -43,7 +43,7 @@ class WorkFunction:
     def GetPotential(self, locpot="LOCPOT"):
 
         with open(locpot, "r") as f:
-            fread = f.read()
+
             _ = f.readline()
             scale_factor = float(f.readline())
 
@@ -136,9 +136,11 @@ class WorkFunction:
 
         if ax is None: fig, ax = plt.subplots(1, 1, sharex=True)
 
-        ax.plot(self.coords, self.planar, lw=3)
+        ax.plot(self.coords, self.planar, lw=3, label="Planar")
+        ax.axhline(y=self.efermi, lw=3, ls="--", label="Efermi")
         ax.set_xlim(self.coords.min(), self.coords.max())
         ax.set_facecolor((0.95,0.95,0.95))
+        ax.legend(loc=1, fontsize=20)
         if grid: ax.grid(True)
         ax.set_xlabel("$\mathrm{Position} \ (\mathrm{\AA})$", fontsize=30)
         ax.set_ylabel("$\mathrm{Potential} \ (\mathrm{eV})$", fontsize=30)
@@ -152,7 +154,7 @@ def main():
     c.GetPotential(locpot="LOCPOT")  # path for LOCPOT
     c.PlanarAverage(axis="z") # potential along z direction
     print("Work Function = %.3f eV" % (c.enevac - c.efermi))
-    # c.PlotPotential(show=True) # Plot e.g. Planar Potential
+    c.PlotPotential(show=True) # Plot e.g. Planar Potential
 
 
 if __name__ == "__main__":
