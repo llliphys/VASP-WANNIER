@@ -10,7 +10,7 @@ Here are some python scripts used to check the VASP input/output files: INCAR, P
 
 - `pycell.py`: manipulate CIF or POSCAR file, e.g., making supercell, varying vacuum size, etc.
 
-- `workfunc.py`: calculate the work function and plot the planar averaged potental of a slab system
+- `workfunc.py`: calculate the work function and plot the planar averaged potental of a slab system.
 
 - `to be continued`: more scripts are yet to come ...
 
