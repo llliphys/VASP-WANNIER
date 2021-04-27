@@ -1,5 +1,5 @@
 ### Intro
-Here are some python scripts used to check the VASP input/output files: INCAR, POSCAR, POTCAR, KPOINTS, OSZICAR, OUTCAR, and so on. To check out how to use them, just simply command `python script_name.py` or `python script_name.py -h` to have a first glance.
+Here are some python scripts used to check the VASP input/output files: INCAR, POSCAR, POTCAR, KPOINTS, OSZICAR, OUTCAR, and so on. To check out how to use them, just simply command `python script_name.py` or `python script_name.py -h` on your terminal to have a first glance.
 
 - `check_input.py`: check INCAR, POSCAR, POTCAR, and KPOINTS to see each setup is correct.
 
