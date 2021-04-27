@@ -16,7 +16,7 @@ Here are some python scripts used to check the VASP input/output files: INCAR, P
 ---
 
 ### Install
-The simpliest way is to put these scripts into a directory and then export the path of this directory as `PYTHONPATH`.
+The simpliest way to use these scripts is to put them into a directory and then export the path of this directory as `PYTHONPATH`.
 ```
 export PYTHONPATH=/the/path/of/the/directory:${PYTHONPATH}
 ```
