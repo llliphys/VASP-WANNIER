@@ -25,8 +25,8 @@ class WorkFunction:
     Some part of this module is taken from https://github.com/WMD-group/MacroDensity but with
     substantial modification for easy-to-use purposes. Pls feel free to accomodate your owns.
 
-    Example usage is given in the end of this module, e.g. calculating thework function and
-    plotting the planar averaged potential along a specified direction (axis = "x"/"y"/"z").
+    Example usage is given in the end of this module, e.g., calculating thework function and
+    plotting the planar averaged potential along a specified direction (e.g. the z direction).
     """
     def __init__(self, wrkdir=None):
 
