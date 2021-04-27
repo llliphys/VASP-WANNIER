@@ -40,6 +40,6 @@ python check_output.py outcar [energy] [magmom]
 python pycheck.py incar [poscar] [potcar] [outcar]
 python pycell.py -i POSCAR -x 2 -y 2 -z 1 -v 20
 ```
-For `pycell.py`, `-x 2 -y 2 -z 1` makes a supercell
-of the size (2, 2, 1) along three lattice directions
+Here `-x 2 -y 2 -z 1` makes a supercell of
+the size (2, 2, 1) along three lattice directions
 and `-v 20` sets the vacuum size to 20 angstrom.
