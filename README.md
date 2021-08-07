@@ -27,10 +27,6 @@ and the following can also be installed but are optional for pycell.py and pyche
 
 ### Usage
 ```
-python check_input.py incar [ediff] [isif]
-python check_input.py poscar [lattice] [position]
-python check_input.py potcar [titel] [encut]
-python check_output.py outcar [energy] [magmom]
 python pycheck.py incar [poscar] [potcar] [outcar]
 python pycell.py -i POSCAR -x 2 -y 2 -z 1 -v 20
 ```
