@@ -32,7 +32,7 @@ python pycheck.py incar [poscar] [potcar] [outcar]
 
 ```
 python pycell.py -i POSCAR -x 2 -y 2 -z 1 -v 20
-Here `-x 2 -y 2 -z 1` builds a supercell of the size 2x2x1 and `-v 20` sets the vacuum size to 20 A.
+Here `-x 2 -y 2 -z 1` builds a supercell of 2x2x1 and `-v 20` sets the vacuum size to 20 A.
 ````
 
 ```
