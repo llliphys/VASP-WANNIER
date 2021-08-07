@@ -52,6 +52,7 @@ def main():
     args = sys.argv[1:]
 
     arg = argparse.ArgumentParser() #(add_help=True)
+
     arg.add_argument('-i', type=str, default=None, help='POSCAR or CIF file (type=str)')
     arg.add_argument('-x', type=int, default=1, help='Supercell size along x (type=int)')
     arg.add_argument('-y', type=int, default=1, help='Supercell size along y (type=int)')
