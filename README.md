@@ -32,3 +32,12 @@ python pycell.py -i POSCAR -x 2 -y 2 -z 1 -v 20
 ```
 Here `-x 2 -y 2 -z 1` builds a supercell of
 the size 2x2x1 and `-v 20` sets the vacuum size to 20 A.
+
+```
+workfunc.py is a Python Class which implements the following instance methods: 
+wf = WorkFunction()
+wf.GetFermilevel(outcar="OUTCAR")
+wf.GetPotential(locpot="LOCPOT")
+wf.PlanarAverage(axis="z")
+wf.PlotPotential(show=True)
+```

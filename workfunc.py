@@ -150,10 +150,15 @@ class WorkFunction:
 def main():
 
     c = WorkFunction()
+
     c.GetFermilevel(outcar="OUTCAR") # path for OUTCAR
+    
     c.GetPotential(locpot="LOCPOT")  # path for LOCPOT
+    
     c.PlanarAverage(axis="z") # potential along z direction
+
     print("Work Function = %.3f eV" % (c.enevac - c.efermi))
+
     c.PlotPotential(show=True) # Plot e.g. Planar Potential
 
 
