@@ -1,10 +1,6 @@
 ### Intro
 Here are some python scripts used to check the VASP input/output files: INCAR, POSCAR, POTCAR, KPOINTS, OSZICAR, OUTCAR, and so on. To check out how to use them, just simply command `python script_name.py` or `python script_name.py -h` on your terminal to have a first glance.
 
-- `check_input.py`: check INCAR, POSCAR, POTCAR, and KPOINTS to see each setup is correct.
-
-- `check_output.py`: check OUTCAR to see if a relaxation or scf calculation is converged.
-
 - `pycheck.py`: simply merge the above two scripts into a single script (more compact).
 
 - `pycell.py`: manipulate CIF or POSCAR file, e.g., making supercell, varying vacuum size, etc.
@@ -13,7 +9,6 @@ Here are some python scripts used to check the VASP input/output files: INCAR, P
 
 - `to be continued`: more scripts are yet to come ...
 
----
 
 ### Install
 The simpliest way to use these scripts is to put them into a directory and then export the path of this directory as `PYTHONPATH`.
@@ -29,7 +24,6 @@ and the following can also be installed but are optional for pycell.py and pyche
 - scipy: https://www.scipy.org/
 - matplotlib: https://matplotlib.org/
 
----
 
 ### Usage
 ```
