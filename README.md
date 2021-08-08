@@ -45,3 +45,24 @@ wf.GetPotential(locpot="LOCPOT")
 wf.PlanarAverage(axis="z")
 wf.PlotPotential(show=True)
 ```
+
+```
+pyvasp.py is a Python class which implements an antomative workflow from creating inputs 
+    from sratch and restarting from existing calculations to submitting calculations to 
+    popular job manager systems such as PBS and SLURM.
+
+from pyvasp import PythVasp
+
+INP = "INPUT" # containing POSCAR and POTCAR
+
+# Perform Relaxation
+RLX = "RELAX" # working directory for RELAXATION
+Job = PythVasp(task="RLX", srcdir=INP, objdir=RLX)
+Job.MakeInput(encut=600, ispin=2, nsw=500, isif=3, ibrion=2, ediffg="-1E-2", algo="Normal", nelm=100, nelmin=8, ediff="1E-6", ismear=0, sigma=0.1, isym=2, lwave=True, lcharg=True, lorbit=11, nkpts=(8,8,2), gamma=True, kpar=4, npar=10, poscar="INPUT/POSCAR", potcar="INPUT/POTCAR", make_clean=True)
+Job.Submission(queue="SLURM", ncores=40)
+
+# Perform Static SCF 
+SCF = "STATIC" # working directory for STATIC SCF
+Job = PythVasp(task="SCF", srcdir=RLX, objdir=SCF)
+Job.MakeInput(encut=600, ispin=2, icharg=1, lorbit=11, algo="Normal", nelm=300, nelmin=8, ediff="1E-6", ismear=0, sigma=0.1, lwave=False, lcharg=True, nkpts=(8,8,2), gamma=True, kpar=4, npar=10, make_clean=True)
+Job.Submission(queue="SLURM", ncores=40)
