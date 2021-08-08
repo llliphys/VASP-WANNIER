@@ -48,8 +48,8 @@ wf.PlotPotential(show=True)
 
 ```
 pyvasp.py is a Python class which implements an antomative workflow from creating inputs 
-    from sratch and restarting from existing calculations to submitting calculations to 
-    popular job manager systems such as PBS and SLURM.
+from sratch and restarting from existing calculations to submitting calculations to popular 
+job manager systems such as PBS and SLURM. Here below presents a basic how-to-use-pyvasp:
 
 from pyvasp import PythVasp
 
