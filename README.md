@@ -1,7 +1,7 @@
 ### Intro
 Here are some python scripts to pre- and post-process DFT-VASP calculations. To check out how to use them, just simply command `python script_name.py` or `python script_name.py -h` on your terminal to have a first insight.
 
-- `pycheck.py`: Check VASP input and output files, e.g. checking if input setup is correct.
+- `pycheck.py`: Inspect VASP input and output files, e.g. checking if input setup is correct.
 
 - `pycell.py`: Manipulate CIF or POSCAR file, e.g., making supercell, varying vacuum size, etc.
 
