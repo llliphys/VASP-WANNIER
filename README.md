@@ -18,7 +18,7 @@ The simpliest way to use these scripts is to put them into a directory and then 
 export PYTHONPATH=/the/path/of/the/directory:${PYTHONPATH}
 ```
 
-To use these python scripts smoothly, the following prerequisites need to be installed:
+To run these scripts smoothly, the following prerequisites need to be installed:
 - numpy: https://numpy.org/
 - ase: https://wiki.fysik.dtu.dk/ase/
 - scipy: https://www.scipy.org/
