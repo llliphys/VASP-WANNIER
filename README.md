@@ -1,15 +1,15 @@
 ### Intro
-Here are some python scripts used to check the VASP input/output files: INCAR, POSCAR, POTCAR, KPOINTS, OSZICAR, OUTCAR, and so on. To check out how to use them, just simply command `python script_name.py` or `python script_name.py -h` on your terminal to have a first glance.
+Here are some python scripts to pre- and post-process DFT-VASP calculations. To check out how to use them, just simply command `python script_name.py` or `python script_name.py -h` on your terminal to have a first insight.
 
-- `pycheck.py`: simply merge the above two scripts into a single script (more compact).
+- `pycheck.py`: Check VASP input and output files, e.g. checking if input setup is correct.
 
-- `pycell.py`: manipulate CIF or POSCAR file, e.g., making supercell, varying vacuum size, etc.
+- `pycell.py`: Manipulate CIF or POSCAR file, e.g., making supercell, varying vacuum size, etc.
 
-- `workfunc.py`: calculate the work function and plot the planar averaged potental of a slab system.
+- `workfunc.py`: Calculate the work function and plot the planar averaged potental of a slab system.
 
 - `pyvasp.py`: A Python class for carrying out a series of DFT-VASP calculations including e.g. "Relaxation", "Static SCF", "Band Structure", "Density of States", "Charge Density", "Fermi Surface", "Hybrid Functional", "GW Calculation", "BSE calculation", which are reprensted by task="RLX", "SCF", "BND", "DOS", "CHG", "FSF", "HSE", "GWA", and "BSE", respectively. This class module can be used as an automative workflow to implement creating inputs from sratch and restarting from existing calculations to submitting calculations to popular job manager systems such as PBS and SLURM.
 
-- `to be continued`: more scripts are yet to come ...
+- `to be continued`: More scripts are yet to come ...
 
 
 ### Install
