@@ -7,7 +7,9 @@ Here are some python scripts to pre- and/or post-process DFT-VASP and VASP2WANNI
 
 - `workfunc.py`: Calculate the work function and plot the planar averaged potental of a slab system.
 
-- `pythvasp.py`: A Python class for carrying out a series of DFT-VASP calculations including e.g. "Relaxation", "Static SCF", "Band Structure", "Density of States", "Charge Density", "Fermi Surface", "Hybrid Functional", "GW Calculation", "BSE calculation", which are reprensted by task="RLX", "SCF", "BND", "DOS", "CHG", "FSF", "HSE", "GWA", and "BSE", respectively. This class module can be used as an automative workflow to implement creating inputs from sratch and restarting from existing calculations to submitting calculations to popular job manager systems such as PBS and SLURM.
+- `pythvasp.py`: A Python class implementing a series of DFT-VASP calculations including e.g. "Relaxation", "Static SCF", "Band Structure", "Density of States", "Charge Density", "Fermi Surface", "Hybrid Functional", "GW Calculation", "BSE calculation", which are reprensted by task="RLX", "SCF", "BND", "DOS", "CHG", "FSF", "HSE", "GWA", and "BSE", respectively. This class module can be used as an automative workflow to create inputs from sratch and to restart from existing calculations and to submit calculations to popular job manager systems such as PBS and SLURM.
+
+- `pythwann.py`: A Python class implementing a series of VASP2WANNIER calculations including e.g. "Wannierization", "Band Interplolation", "Berry Curvature", "Anomalous Hall Conductivity", etc, Which are represented by task="WAN", "BND", "BC", and "AHC". This class module can be used as an automative workflow to create inputs from sratch and to restart from existing calculations and to submit calculations to popular job manager systems such as PBS and SLURM.
 
 - `to be continued`: More scripts are yet to come ...
 
