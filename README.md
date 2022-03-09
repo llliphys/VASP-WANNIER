@@ -1,5 +1,5 @@
 ### Intro
-Here are some python scripts to pre- and post-process DFT-VASP calculations. To check out how to use them, just simply command `python script_name.py` or `python script_name.py -h` on your terminal to have a first insight.
+Here are some python scripts to pre- and/or post-process DFT-VASP and VASP2WANNIER calculations. To check them out, just simply command `python script_name.py` or `python script_name.py -h` on your terminal to have a first insight.
 
 - `pycheck.py`: Inspect VASP input and output files, e.g. checking if input setup is correct.
 
@@ -45,11 +45,11 @@ wf.PlotPotential(show=True)
 ```
 
 ```
-pyvasp.py is a Python class which implements an antomative workflow from creating inputs 
+pythvasp.py is a Python class which implements an antomative DFT-VASP workflow from creating inputs 
 from sratch and restarting from existing calculations to submitting calculations to popular 
 job manager systems such as PBS and SLURM. Here below presents a basic how-to-use-pyvasp:
 
-from pyvasp import PythVasp
+from pythvasp import PythVasp
 
 INP = "INPUT" # containing POSCAR and POTCAR
 
