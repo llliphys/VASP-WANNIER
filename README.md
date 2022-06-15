@@ -1,5 +1,5 @@
 ### Intro
-Here are some python scripts to pre- and post-process DFT-VASP and VASP2WANNIER calculations. To check them out, just simply command `python script_name.py` or `python script_name.py -h` on your terminal to have a first insight.
+Here are some python scripts to pre- and post-process DFT-VASP and VASP2WANNIER calculations. To check them out, just simply command `python script_name.py` or `python script_name.py -h` on your terminal.
 
 - `pycheck.py`: Inspect VASP input and output files, e.g. checking if input setup is correct.
 
@@ -7,9 +7,9 @@ Here are some python scripts to pre- and post-process DFT-VASP and VASP2WANNIER 
 
 - `workfunc.py`: Calculate the work function and plot the planar averaged potental of a slab system.
 
-- `pythvasp.py`: A Python class module implementing a series of DFT-VASP calculations including e.g. "Relaxation", "Static SCF", "Band Structure", "Density of States", "Charge Density", "Fermi Surface", "Hybrid Functional", "GW Calculation", "BSE calculation", which are launched by setting task="RLX", "SCF", "BND", "DOS", "CHG", "FSF", "HSE", "GWA", and "BSE", respectively. This class module allows to create inputs from sratch, to restart from existing calculations, and to submit calculations in PBS and SLURM scripts.
+- `pythvasp.py`: A Python workflow implementing a series of DFT-VASP calculations including e.g. "Relaxation", "Static SCF", "Band Structure", "Density of States", "Charge Density", "Fermi Surface", "Hybrid Functional", "GW Calculation", "BSE calculation", which are launched by setting task="RLX", "SCF", "BND", "DOS", "CHG", "FSF", "HSE", "GWA", and "BSE", respectively. This class module allows to create inputs from sratch, to restart from existing calculations, and to submit calculations in PBS and SLURM scripts.
 
-- `pythwann.py`: A Python class module implementing a series of VASP2WANNIER calculations including e.g. "Wannierization", "Band Interplolation", "Berry Curvature", "Anomalous Hall Conductivity", which are launched by setting task="WAN", "BND", "BC", and "AHC". This class module allows to create inputs from sratch, to restart from existing calculations, and to submit calculations in PBS and SLURM scripts.
+- `pythwann.py`: A Python workflow implementing a series of VASP2WANNIER calculations including e.g. "Wannierization", "Band Interplolation", "Berry Curvature", "Anomalous Hall Conductivity", which are launched by setting task="WAN", "BND", "BC", and "AHC". This class module allows to create inputs from sratch, to restart from existing calculations, and to submit calculations in PBS and SLURM scripts.
 
 - `to be continued`: More scripts are yet to come ...
 
